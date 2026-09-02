@@ -1,4 +1,0 @@
-repository "Pegar Bolinha/Pegar Bolinha@4674235528395@cloud"
-  path "/"
-    br "/main"
-    co "/main"
