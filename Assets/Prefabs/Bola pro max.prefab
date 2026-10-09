@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3448012873510480666}
   m_Layer: 0
   m_Name: Bola pro max
-  m_TagString: Untagged
+  m_TagString: ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
