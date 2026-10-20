@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class GameManager : MonoBehaviour
     public float gamewidth = 40f;
     public int score = 0;
     public int droppedBalls = 0;
+    public TMP_Text scoreText;
+    public TMP_Text textFinal;
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -19,15 +22,20 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        scoreText.text = "Pontos:0";
+        textFinal.text = " ";
         Time.timeScale = 1f;
+        
     }
     public void AddScore(int Points=1)
     {
         score += Points;
         Debug.Log("Score: " + score);
+        scoreText.text = "Pontos: "+score;
         if (score >= 30)
         {
             Debug.Log("ei cara, você ganhou o game, radical!");
+            textFinal.text = "você venceu!";
             Time.timeScale = 0f;
         }
     }
