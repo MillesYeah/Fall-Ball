@@ -6,13 +6,15 @@ public class ReniciarSozinho : MonoBehaviour
 {
     public float tempoEspera = 10;
 
-    void update()
+    void Update()
     {
-        tempoEspera = Time.unscaledDeltaTime;
+        tempoEspera -= Time.unscaledDeltaTime;
+        Debug.Log("tempoEspera: " + tempoEspera);
         if (tempoEspera <= 0)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Jogo normal mermo");
+            
         }
     }
 }
